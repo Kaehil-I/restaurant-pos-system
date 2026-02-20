@@ -1,4 +1,4 @@
-#🍽️ Restaurant POS System
+ #🍽️ Restaurant POS System
 PROG7311 – Enterprise Systems Project
 
 📌 Project Description
