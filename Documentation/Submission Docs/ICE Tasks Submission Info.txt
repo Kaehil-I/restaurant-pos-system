@@ -1,0 +1,15 @@
+This document may be used by a marker to obtain clarification on submissions for this assessment.
+
+ICE Task 1:
+- Submitted 27/02/2026
+- Documents submitted:
+	- PROG7311 POS System Planning.docx (now outdated)
+	- GitHub repo link.txt
+
+ICE Task 2:
+- Submitted 27/02/2026
+- Documents submitted:
+	- PROG7311 POS System Planning.docx (Current as of date submitted)
+	- GitHub repo link.txt
+	- ICE Tasks Submission Info.txt
+- Planning document has been updated for this submission to contain the mockups created by team members. Should a marker require the raw images, they may be located in the GitHub repository.
