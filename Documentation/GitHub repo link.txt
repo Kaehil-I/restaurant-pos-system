@@ -1,0 +1,5 @@
+Emerald POS Systems - PROG7311
+
+All source code and documentation is found in the mentioned GitHub repository
+
+https://github.com/Kaehil-I/restaurant-pos-system
