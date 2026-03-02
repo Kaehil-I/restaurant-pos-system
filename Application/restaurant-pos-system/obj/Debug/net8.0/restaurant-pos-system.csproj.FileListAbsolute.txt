@@ -66,3 +66,6 @@ C:\Users\Kaehil Indurjeeth\OneDrive\Documents\GitHub\restaurant-pos-system\Appli
 C:\Users\Kaehil Indurjeeth\OneDrive\Documents\GitHub\restaurant-pos-system\Application\restaurant-pos-system\obj\Debug\net8.0\restaurant-pos-system.pdb
 C:\Users\Kaehil Indurjeeth\OneDrive\Documents\GitHub\restaurant-pos-system\Application\restaurant-pos-system\obj\Debug\net8.0\restaurant-pos-system.genruntimeconfig.cache
 C:\Users\Kaehil Indurjeeth\OneDrive\Documents\GitHub\restaurant-pos-system\Application\restaurant-pos-system\obj\Debug\net8.0\ref\restaurant-pos-system.dll
+C:\Users\lab_services_student\Documents\GitHub\Prog_3A_7311\restaurant-pos-system\Application\restaurant-pos-system\obj\Debug\net8.0\restaurant-pos-system.dll
+C:\Users\lab_services_student\Documents\GitHub\Prog_3A_7311\restaurant-pos-system\Application\restaurant-pos-system\obj\Debug\net8.0\refint\restaurant-pos-system.dll
+C:\Users\lab_services_student\Documents\GitHub\Prog_3A_7311\restaurant-pos-system\Application\restaurant-pos-system\obj\Debug\net8.0\restaurant-pos-system.pdb

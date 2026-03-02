@@ -2,22 +2,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Staff Management</h1>
+<h1>Orders</h1>
 
 <table>
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Role</th>
+            <th>ID</th>
+            <th>Table</th>
+            <th>Waiter</th>
+            <th>Total</th>
+            <th>Status</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Alice</td>
-            <td>alice@example.com</td>
-            <td>Manager</td>
+            <td>101</td>
+            <td>12</td>
+            <td>John</td>
+            <td>$45</td>
+            <td>Completed</td>
             <td>
                 <button class="edit-btn">Edit</button>
                 <button class="delete-btn">Delete</button>
@@ -25,9 +29,11 @@
         </tr>
 
         <tr>
-            <td>Bob</td>
-            <td>bob@example.com</td>
-            <td>Waiter</td>
+            <td>102</td>
+            <td>5</td>
+            <td>Emma</td>
+            <td>$72</td>
+            <td>Preparing</td>
             <td>
                 <button class="edit-btn">Edit</button>
                 <button class="delete-btn">Delete</button>

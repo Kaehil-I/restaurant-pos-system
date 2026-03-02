@@ -9,7 +9,7 @@ namespace restaurant_pos_system.Controllers
             return View();
         }
 
-        public IActionResult CreatedOrders()
+        public IActionResult Orders()
         {
             return View();
         }

@@ -1,5 +1,31 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<h1>Stock Control</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Reorder Level</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tomatoes</td>
+            <td>15</td>
+            <td>10</td>
+            <td class="ok">OK</td>
+        </tr>
+
+        <tr>
+            <td>Cheese</td>
+            <td>5</td>
+            <td>10</td>
+            <td class="low">Low</td>
+        </tr>
+    </tbody>
+</table>

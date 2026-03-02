@@ -1,22 +1,88 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background: #111827;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+    .sidebar a {
+        color: #10b981;
+        text-decoration: none;
+    }
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    background: #1f2937;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+}
+
+.edit-btn {
+    background: #10b981;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background: #ef4444;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    border-radius: 5px;
+}
+
+.low {
+    color: orange;
+}
+
+.ok {
+    color: lightgreen;
+}
+
+/* Light Mode */
+.light-mode {
+    background: #f3f4f6;
+    color: black;
 }
