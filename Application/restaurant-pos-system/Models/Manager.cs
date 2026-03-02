@@ -1,8 +1,6 @@
-namespace restaurant_pos_system.Models
-
 using System.ComponentModel.DataAnnotations;
 
-namespace YourProjectName.Models
+namespace restaurant_pos_system.Models
 {
     public class Manager
     {
