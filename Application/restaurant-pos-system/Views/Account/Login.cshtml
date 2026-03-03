@@ -63,17 +63,18 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 80px;
+            padding: 70px;
             transition: 0.3s ease;
         }
 
         .logo {
             width: 240px;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
+            display: block;
         }
 
         .welcome-text h1 {
-            font-size: 38px;
+            font-size: 34px;
             font-weight: 700;
             color: var(--text-primary);
         }
@@ -166,7 +167,7 @@
             <div class="col-md-6 left-panel">
 
                 <!-- LOGO -->
-                <img src="emerald-logo.png" class="logo" alt="Emerald POS Logo">
+                <img src="~/images/emerald_pos_logo.png" class="logo" alt="Emerald POS Logo" asp-append-version="true">
 
                 <!-- WELCOME TEXT -->
                 <div class="welcome-text">
@@ -175,8 +176,8 @@
                 </div>
 
                 <!-- ROLE BUTTONS -->
-                <button type="button" class="btn btn-outline-success role-btn" data-role="Waiter">Waiter</button>
-                <button type="button" class="btn btn-outline-warning role-btn" data-role="Kitchen">Kitchen</button>
+                <button type="button" class="btn btn-success role-btn" data-role="Waiter">Waiter</button>
+                <button type="button" class="btn btn-warning role-btn" data-role="Kitchen">Kitchen</button>
                 <button type="button" class="btn role-btn management-btn" data-role="Manager">Management</button>
 
             </div>
