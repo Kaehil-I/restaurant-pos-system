@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\accountmodels\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:models\\accountmodels\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\accountmodels\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:models\\accountmodels\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -24,14 +32,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\accountmodels\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:models\\accountmodels\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\accountmodels\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:models\\accountmodels\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,7 +61,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,30 +70,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Manager.cs",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\Manager.cs",
-              "RelativeDocumentMoniker": "Models\\Manager.cs",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\Manager.cs",
-              "RelativeToolTip": "Models\\Manager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T12:43:06.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "ViewState": "AgIAAJgCAAAAAAAAAAApwKsCAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-03-02T12:39:03.684Z"
             },
             {
               "$type": "Document",
@@ -109,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "ApplicationDbContext.cs",
@@ -121,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -133,7 +109,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Account\\Login.cshtml*",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml*",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAKkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-02T12:03:39.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ViewState": "AgIAAJgCAAAAAAAAAAApwKsCAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-03-02T12:39:03.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AccountViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\AccountViewModel.cs",
               "RelativeDocumentMoniker": "Models\\AccountModels\\AccountViewModel.cs",
@@ -141,24 +142,37 @@
               "RelativeToolTip": "Models\\AccountModels\\AccountViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T12:15:39.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Account\\Login.cshtml*",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml*",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-02T12:03:39.399Z",
+              "WhenOpened": "2026-03-02T12:15:39.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\AccountModels\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\AccountModels\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T12:16:48.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Manager.cs",
+              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\Manager.cs",
+              "RelativeDocumentMoniker": "Models\\Manager.cs",
+              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\Manager.cs",
+              "RelativeToolTip": "Models\\Manager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T12:43:06.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -167,18 +181,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-03-02T13:02:50.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Models\\AccountModels\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\ApplicationUser.cs",
-              "RelativeToolTip": "Models\\AccountModels\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T12:16:48.445Z"
             },
             {
               "$type": "Document",
