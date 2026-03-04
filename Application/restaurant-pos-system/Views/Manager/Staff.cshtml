@@ -1,6 +1,24 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿ <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>💎 Emerald POS</h2>
+
+            <ul>
+                <li><a asp-controller="Manager" asp-action="Dashboard">Dashboard</a></li>
+                <li><a asp-controller="Manager" asp-action="Orders">Orders</a></li>
+                <li><a asp-controller="Manager" asp-action="Stock">Stock</a></li>
+                <li><a asp-controller="Manager" asp-action="Staff">Staff</a></li>
+            </ul>
+
+            <!-- Theme Switch -->
+            <div class="theme-switch">
+                <span>🌞</span>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>🌙</span>
+            </div>
+        </div>
 
 <h1>Staff Management</h1>
 

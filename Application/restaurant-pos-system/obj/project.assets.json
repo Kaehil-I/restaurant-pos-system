@@ -2664,23 +2664,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gregory Luyckfasseel\\.nuget\\packages\\": {},
+    "C:\\Users\\lab_services_student\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\restaurant-pos-system.csproj",
+      "projectUniqueName": "C:\\Users\\lab_services_student\\Documents\\GitHub\\Prog_3A_7311\\restaurant-pos-system\\Application\\restaurant-pos-system\\restaurant-pos-system.csproj",
       "projectName": "restaurant-pos-system",
-      "projectPath": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\restaurant-pos-system.csproj",
-      "packagesPath": "C:\\Users\\Gregory Luyckfasseel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\obj\\",
+      "projectPath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\Prog_3A_7311\\restaurant-pos-system\\Application\\restaurant-pos-system\\restaurant-pos-system.csproj",
+      "packagesPath": "C:\\Users\\lab_services_student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\Prog_3A_7311\\restaurant-pos-system\\Application\\restaurant-pos-system\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gregory Luyckfasseel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lab_services_student\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2707,7 +2707,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -2755,7 +2755,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

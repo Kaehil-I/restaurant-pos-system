@@ -6,9 +6,10 @@
     "\\Views",
     "\\Views\\Account",
     "\\Views\\Manager",
+    "\\Views\\Shared",
     "\\wwwroot",
     "\\wwwroot\\css"
   ],
-  "SelectedNode": "\\Views\\Manager\\Staff.cshtml",
+  "SelectedNode": "\\restaurant-pos-system.csproj",
   "PreviewInSolutionExplorer": false
 }
