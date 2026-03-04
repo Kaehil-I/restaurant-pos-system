@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Create Order";
+    var tableId = ViewBag.TableId;
+}
+
+<h1>Create Order</h1>
+
+<h3>Table @tableId</h3>
+
+<div class="order-section">
+
+    <div class="menu-category">
+        <h4>Burgers</h4>
+        <button class="menu-btn">Classic Burger</button>
+        <button class="menu-btn">Cheese Burger</button>
+    </div>
+
+    <div class="menu-category">
+        <h4>Drinks</h4>
+        <button class="menu-btn">Coke</button>
+        <button class="menu-btn">Water</button>
+    </div>
+
+</div>
+
+<div class="order-summary">
+    <h3>Current Order</h3>
+    <p>No items added yet.</p>
+</div>

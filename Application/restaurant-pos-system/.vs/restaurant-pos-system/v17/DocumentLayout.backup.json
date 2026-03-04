@@ -1,57 +1,67 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\",
+  "WorkspaceRootPath": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\views\\waitron\\mytables.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:views\\waitron\\mytables.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\views\\waitron\\createorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:views\\waitron\\createorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\controllers\\waitroncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:controllers\\waitroncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\accountmodels\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\accountmodels\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:models\\accountmodels\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\accountmodels\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\accountmodels\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:models\\accountmodels\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:models\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\gregory luyckfasseel\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|c:\\users\\kaehil indurjeeth\\onedrive\\documents\\github\\restaurant-pos-system\\application\\restaurant-pos-system\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12C96254-2BD4-4B7B-A3DF-C45C8CA0A9D6}|restaurant-pos-system.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\CreateBooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Manager\\CreateBooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\CreateBooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\ViewBooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Manager\\ViewBooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\ViewBooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -61,7 +71,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -73,11 +83,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "CreateOrder.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Waitron\\CreateOrder.cshtml",
+              "RelativeDocumentMoniker": "Views\\Waitron\\CreateOrder.cshtml",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Waitron\\CreateOrder.cshtml*",
+              "RelativeToolTip": "Views\\Waitron\\CreateOrder.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-04T07:10:41.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyTables.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Waitron\\MyTables.cshtml",
+              "RelativeDocumentMoniker": "Views\\Waitron\\MyTables.cshtml",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Waitron\\MyTables.cshtml*",
+              "RelativeToolTip": "Views\\Waitron\\MyTables.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-04T07:10:30.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WaitronController.cs",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Controllers\\WaitronController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WaitronController.cs",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Controllers\\WaitronController.cs*",
+              "RelativeToolTip": "Controllers\\WaitronController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T07:09:53.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -85,11 +134,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\ApplicationDbContext.cs",
               "RelativeToolTip": "ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -97,11 +146,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Program.cs",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAIEAAAAAAAAAAAAawJYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -109,62 +158,60 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Account\\Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Account\\Login.cshtml*",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml*",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAAAKkAAAAaAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAAAKcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-02T12:03:39.399Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.103\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
               "ViewState": "AgIAAJgCAAAAAAAAAAApwKsCAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2026-03-02T12:39:03.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AccountViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\AccountViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\AccountViewModel.cs",
               "RelativeDocumentMoniker": "Models\\AccountModels\\AccountViewModel.cs",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\AccountViewModel.cs",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\AccountViewModel.cs",
               "RelativeToolTip": "Models\\AccountModels\\AccountViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T12:15:39.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T12:15:39.253Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Models\\AccountModels\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\AccountModels\\ApplicationUser.cs",
               "RelativeToolTip": "Models\\AccountModels\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T12:16:48.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-02T12:16:48.445Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Manager.cs",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\Manager.cs",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\Manager.cs",
               "RelativeDocumentMoniker": "Models\\Manager.cs",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\Manager.cs",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\Manager.cs",
               "RelativeToolTip": "Models\\Manager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -172,11 +219,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Properties\\launchSettings.json",
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -184,11 +231,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -196,11 +243,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Kaehil Indurjeeth\\OneDrive\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Models\\ErrorViewModel.cs",
               "RelativeToolTip": "Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -208,24 +255,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "CreateBooking.cshtml",
               "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\CreateBooking.cshtml",
-              "RelativeDocumentMoniker": "Views\\Manager\\CreateBooking.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\CreateBooking.cshtml",
               "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\CreateBooking.cshtml",
-              "RelativeToolTip": "Views\\Manager\\CreateBooking.cshtml",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\CreateBooking.cshtml",
               "ViewState": "AgIAAJ4AAAAAAAAAAAAmwLgAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-02T12:03:39.335Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "ViewBooking.cshtml",
               "DocumentMoniker": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\ViewBooking.cshtml",
-              "RelativeDocumentMoniker": "Views\\Manager\\ViewBooking.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\ViewBooking.cshtml",
               "ToolTip": "C:\\Users\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\ViewBooking.cshtml",
-              "RelativeToolTip": "Views\\Manager\\ViewBooking.cshtml",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Gregory Luyckfasseel\\Documents\\GitHub\\restaurant-pos-system\\Application\\restaurant-pos-system\\Views\\Manager\\ViewBooking.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAI8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-02T12:03:39.387Z"
