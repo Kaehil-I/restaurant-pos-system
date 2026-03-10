@@ -20,9 +20,9 @@ namespace restaurant_pos_system
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
 
-            // Register EF Core with an in-memory database for development/testing.
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("AuthDb"));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // Register Identity (with roles) and EF stores
             builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
@@ -50,6 +50,10 @@ namespace restaurant_pos_system
                     var logger = services.GetRequiredService<ILogger<Program>>();
                     var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+                    
+                    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                    db.Database.Migrate();
+                    
 
                     logger.LogInformation("Starting DB seed.");
 

@@ -1,8 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using restaurant_pos_system.Models;
 
-namespace restaurant_pos_system
+namespace restaurant_pos_system.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -10,5 +9,25 @@ namespace restaurant_pos_system
             : base(options)
         {
         }
+
+        public DbSet<RestaurantTable> RestaurantTables { get; set; }
+
+        public DbSet<Reservation> Reservations { get; set; }
+
+        public DbSet<MenuCategory> MenuCategories { get; set; }
+
+        public DbSet<MenuItem> MenuItems { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+
+        public DbSet<OrderItem> OrderItems { get; set; }
+
+        public DbSet<Payment> Payments { get; set; }
+
+        public DbSet<InventoryItem> InventoryItems { get; set; }
+
+        public DbSet<MenuItemIngredient> MenuItemIngredients { get; set; }
+
+        public DbSet<ActivityLog> ActivityLogs { get; set; }
     }
 }
