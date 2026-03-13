@@ -1,0 +1,47 @@
+﻿@model restaurant_pos_system.Models.Order
+
+<div class="order-card border p-3 rounded shadow-sm">
+
+    <h6 class="fw-bold mb-2">
+        Order #@Model.Id
+    </h6>
+
+    <div class="mb-2">
+        <span class="badge bg-primary">Dine-In</span>
+
+        @* Show counts for Pending / Ready *@
+        @{
+            var pendingCount = Model.OrderItems.Count(i => i.KitchenStatus == "Pending");
+            var readyCount = Model.OrderItems.Count(i => i.KitchenStatus == "Ready");
+        }
+
+        @if (pendingCount > 0)
+        {
+            <span class="badge bg-warning text-dark">@pendingCount Pending</span>
+        }
+
+        @if (readyCount > 0)
+        {
+            <span class="badge bg-success">@readyCount Ready</span>
+        }
+    </div>
+
+    <p class="fw-semibold mb-1">Items:</p>
+    <ul class="list-unstyled">
+        @foreach (var item in Model.OrderItems)
+        {
+            <li>@item.Quantity x @item.MenuItem.Name (@item.KitchenStatus)</li>
+        }
+    </ul>
+
+    <p class="fw-semibold mb-1">Table:</p>
+    <p class="text-muted">@Model.RestaurantTable?.TableNumber</p>
+
+    <a asp-controller="Kitchen"
+       asp-action="Details"
+       asp-route-id="@Model.Id"
+       class="btn btn-outline-secondary w-100 mt-2">
+        View Order
+    </a>
+
+</div>

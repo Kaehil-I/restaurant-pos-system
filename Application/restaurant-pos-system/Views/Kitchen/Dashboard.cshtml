@@ -1,0 +1,36 @@
+﻿@model IEnumerable<restaurant_pos_system.Models.Order>
+
+@{
+    ViewData["Title"] = "Kitchen Dashboard";
+}
+
+<div class="container mt-4">
+
+    <h3 class="fw-bold mb-4">Kitchen Portal</h3>
+
+    <div class="dashboard-box p-4">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="fw-semibold">Kitchen Dashboard</h4>
+
+            <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-dark">
+                    Total Orders: @Model.Count()
+                </span>
+                <button class="btn btn-light btn-sm">🌙</button>
+                <button class="btn btn-light btn-sm">🔔</button>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            @foreach (var order in Model)
+            {
+                <div class="col-md-4">
+                    @Html.Partial("_OrderCard", order)
+                </div>
+            }
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,51 @@
+﻿@model restaurant_pos_system.Models.Order
+
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<div class="container mt-4">
+    <h3>Order #@Model.Id - Table @Model.RestaurantTable?.TableNumber</h3>
+    <p>Waitron: @Model.Waitron?.UserName</p>
+    <p>Status: @Model.Status</p>
+    <p>Created: @Model.CreatedAt.ToString("g")</p>
+
+    <hr />
+
+    <h5>Items</h5>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Kitchen Status</th>
+                <th>Update Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderItems)
+            {
+                <tr>
+                    <td>@item.MenuItem.Name</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Price.ToString("C")</td>
+                    <td>@item.KitchenStatus</td>
+                    <td>
+                        <form asp-action="UpdateItemStatus" method="post">
+                            <input type="hidden" name="orderItemId" value="@item.Id" />
+                            <select name="status" class="form-select form-select-sm mb-1">
+                                <option value="Pending" selected="@(item.KitchenStatus == "Pending")">Pending</option>
+                                <option value="Cooking" selected="@(item.KitchenStatus == "Cooking")">Cooking</option>
+                                <option value="Ready" selected="@(item.KitchenStatus == "Ready")">Ready</option>
+                            </select>
+                            <button type="submit" class="btn btn-sm btn-primary w-100">Update</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a asp-action="Dashboard" class="btn btn-secondary mt-3">Back to Dashboard</a>
+</div>
