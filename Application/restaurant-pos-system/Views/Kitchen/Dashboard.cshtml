@@ -1,36 +1,59 @@
 ﻿@model IEnumerable<restaurant_pos_system.Models.Order>
-
 @{
     ViewData["Title"] = "Kitchen Dashboard";
+    Layout = "~/Views/Shared/_KitchenLayout.cshtml";
 }
 
-<div class="container mt-4">
+<div class="kitchen-wrapper">
 
-    <h3 class="fw-bold mb-4">Kitchen Portal</h3>
-
-    <div class="dashboard-box p-4">
-
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h4 class="fw-semibold">Kitchen Dashboard</h4>
-
-            <div class="d-flex align-items-center gap-2">
-                <span class="badge bg-dark">
-                    Total Orders: @Model.Count()
-                </span>
-                <button class="btn btn-light btn-sm">🌙</button>
-                <button class="btn btn-light btn-sm">🔔</button>
-            </div>
+    <div class="kitchen-header">
+        <h1 class="kitchen-title">Kitchen Dashboard</h1>
+        <div class="header-controls">
+            <span class="total-badge">Total Orders: @Model.Count()</span>
+            <button class="theme-toggle-btn" id="themeToggle" title="Toggle dark/light mode">
+                <span id="themeIcon">🌙</span>
+                <span class="theme-sep">/</span>
+                <span>☀️</span>
+            </button>
         </div>
-
-        <div class="row g-4">
-            @foreach (var order in Model)
-            {
-                <div class="col-md-4">
-                    @Html.Partial("_OrderCard", order)
-                </div>
-            }
-        </div>
-
     </div>
 
+    @if (!Model.Any())
+    {
+        <div class="empty-state">
+            <p>No active orders right now.</p>
+        </div>
+    }
+    else
+    {
+        <div class="orders-grid">
+            @foreach (var order in Model)
+            {
+                @await Html.PartialAsync("_OrderCard", order)
+            }
+        </div>
+    }
+
 </div>
+
+@section Scripts {
+    <script>
+        (function () {
+            const btn  = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            const html = document.documentElement;
+
+            const saved = localStorage.getItem('kitchen-theme') || 'light';
+            icon.textContent = saved === 'dark' ? '☀️' : '🌙';
+
+            btn.addEventListener('click', function () {
+                const isDark = html.getAttribute('data-bs-theme') === 'dark';
+                const next = isDark ? 'light' : 'dark';
+                html.setAttribute('data-bs-theme', next);
+                html.classList.toggle('dark-mode', next === 'dark');
+                icon.textContent = next === 'dark' ? '☀️' : '🌙';
+                localStorage.setItem('kitchen-theme', next);
+            });
+        })();
+    </script>
+}

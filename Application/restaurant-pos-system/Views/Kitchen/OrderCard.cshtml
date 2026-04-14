@@ -1,46 +1,55 @@
 ﻿@model restaurant_pos_system.Models.Order
+@{
+    var orderType = Model.RestaurantTable != null ? "Dine-In" : "Pickup";
+    var statusSlug = Model.Status?.ToLower().Replace(" ", "") ?? "pending";
+    var pendingCount = Model.OrderItems?.Count(i => i.KitchenStatus == "Pending") ?? 0;
+    var readyCount = Model.OrderItems?.Count(i => i.KitchenStatus == "Ready") ?? 0;
+}
 
-<div class="order-card border p-3 rounded shadow-sm">
+<div class="order-card">
 
-    <h6 class="fw-bold mb-2">
-        Order #@Model.Id
-    </h6>
+    <p class="order-card-title">Order #@Model.Id</p>
 
-    <div class="mb-2">
-        <span class="badge bg-primary">Dine-In</span>
-
-        @* Show counts for Pending / Ready *@
-        @{
-            var pendingCount = Model.OrderItems.Count(i => i.KitchenStatus == "Pending");
-            var readyCount = Model.OrderItems.Count(i => i.KitchenStatus == "Ready");
+    <div class="order-card-badges">
+        @if (orderType == "Dine-In")
+        {
+            <span class="badge-type badge-dinein">Dine-In</span>
         }
+        else
+        {
+            <span class="badge-type badge-pickup">Pickup</span>
+        }
+
+        <span class="badge-status badge-@statusSlug">@Model.Status</span>
 
         @if (pendingCount > 0)
         {
-            <span class="badge bg-warning text-dark">@pendingCount Pending</span>
+            <span class="badge-status badge-pending">@pendingCount Pending</span>
         }
-
         @if (readyCount > 0)
         {
-            <span class="badge bg-success">@readyCount Ready</span>
+            <span class="badge-status badge-ready">@readyCount Ready</span>
         }
     </div>
 
-    <p class="fw-semibold mb-1">Items:</p>
-    <ul class="list-unstyled">
-        @foreach (var item in Model.OrderItems)
-        {
-            <li>@item.Quantity x @item.MenuItem.Name (@item.KitchenStatus)</li>
-        }
-    </ul>
+    @if (Model.RestaurantTable != null)
+    {
+        <p style="font-size:13px; color:var(--text-secondary); margin:0;">
+            Table @Model.RestaurantTable.TableNumber &middot; Seats @Model.RestaurantTable.Capacity
+        </p>
+    }
 
-    <p class="fw-semibold mb-1">Table:</p>
-    <p class="text-muted">@Model.RestaurantTable?.TableNumber</p>
+    <div>
+        <p class="order-card-notes-label">Notes:</p>
+        <p class="order-card-notes-text">
+            @(string.IsNullOrWhiteSpace(Model.Notes) ? "—" : Model.Notes)
+        </p>
+    </div>
 
     <a asp-controller="Kitchen"
        asp-action="Details"
        asp-route-id="@Model.Id"
-       class="btn btn-outline-secondary w-100 mt-2">
+       class="btn-view-order">
         View Order
     </a>
 

@@ -1,4 +1,4 @@
-body {
+﻿body {
     margin: 0;
     font-family: Arial;
     background: #0f172a;
@@ -85,4 +85,474 @@ th, td {
 .light-mode {
     background: #f3f4f6;
     color: black;
+}
+/* ============================================================
+   Kitchen Portal Styles
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --font-kitchen: 'DM Sans', sans-serif;
+    /* Dark theme (matches your site.css bg) */
+    --k-bg-page: #0f172a;
+    --k-bg-card: #1f2937;
+    --k-bg-card-hover: #263244;
+    --k-text-primary: #f9fafb;
+    --k-text-secondary: #9ca3af;
+    --k-text-muted: #6b7280;
+    --k-border: #374151;
+    --k-border-strong: #4b5563;
+    /* Badges */
+    --k-badge-dinein-bg: #2563eb;
+    --k-badge-dinein-text: #ffffff;
+    --k-badge-pickup-bg: #16a34a;
+    --k-badge-pickup-text: #ffffff;
+    --k-status-pending-bg: #374151;
+    --k-status-pending-text: #d1d5db;
+    --k-status-preparing-bg: #451a03;
+    --k-status-preparing-text: #fcd34d;
+    --k-status-ready-bg: #052e16;
+    --k-status-ready-text: #86efac;
+    --k-status-cancelled-bg: #450a0a;
+    --k-status-cancelled-text: #fca5a5;
+    /* Action buttons */
+    --k-btn-yellow: #f59e0b;
+    --k-btn-yellow-h: #d97706;
+    --k-btn-green: #16a34a;
+    --k-btn-green-h: #15803d;
+    --k-btn-red: #dc2626;
+    --k-btn-red-h: #b91c1c;
+    --k-radius-md: 10px;
+    --k-radius-lg: 14px;
+    --k-radius-xl: 18px;
+    --k-shadow-card: 0 1px 4px rgba(0,0,0,0.4);
+    --k-shadow-card-hover: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+/* Light mode overrides (your existing .light-mode class) */
+.light-mode {
+    --k-bg-page: #f0f2f5;
+    --k-bg-card: #ffffff;
+    --k-bg-card-hover: #fafafa;
+    --k-text-primary: #111111;
+    --k-text-secondary: #6b7280;
+    --k-text-muted: #9ca3af;
+    --k-border: #e5e7eb;
+    --k-border-strong: #d1d5db;
+    --k-status-pending-bg: #f3f4f6;
+    --k-status-pending-text: #374151;
+    --k-status-preparing-bg: #fef3c7;
+    --k-status-preparing-text: #92400e;
+    --k-status-ready-bg: #dcfce7;
+    --k-status-ready-text: #166534;
+    --k-status-cancelled-bg: #fee2e2;
+    --k-status-cancelled-text: #991b1b;
+    --k-shadow-card: 0 1px 3px rgba(0,0,0,0.06);
+    --k-shadow-card-hover: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ── Layout ── */
+.kitchen-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 28px;
+}
+
+/* ── Header ── */
+.kitchen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.kitchen-title {
+    font-family: var(--font-kitchen);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--k-text-primary);
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.total-badge {
+    background: var(--k-bg-card);
+    color: var(--k-text-primary);
+    border: 1px solid var(--k-border-strong);
+    font-family: var(--font-kitchen);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: var(--k-radius-md);
+    white-space: nowrap;
+}
+
+.theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--k-bg-card);
+    border: 1.5px solid var(--k-border-strong);
+    border-radius: var(--k-radius-md);
+    padding: 6px 12px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: var(--k-text-primary);
+    line-height: 1;
+}
+
+    .theme-toggle-btn:hover {
+        background: var(--k-bg-card-hover);
+    }
+
+.theme-sep {
+    color: var(--k-text-muted);
+    font-size: 13px;
+}
+
+/* ── Orders Grid ── */
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* ── Order Card ── */
+.order-card {
+    font-family: var(--font-kitchen);
+    background: var(--k-bg-card);
+    border: 1px solid var(--k-border);
+    border-radius: var(--k-radius-xl);
+    padding: 22px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: var(--k-shadow-card);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+
+    .order-card:hover {
+        box-shadow: var(--k-shadow-card-hover);
+        transform: translateY(-1px);
+    }
+
+.order-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--k-text-primary);
+    margin: 0;
+}
+
+.order-card-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.order-card-notes-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--k-text-primary);
+    margin-bottom: 3px;
+}
+
+.order-card-notes-text {
+    font-size: 13px;
+    color: var(--k-text-secondary);
+    line-height: 1.5;
+    min-height: 20px;
+}
+
+.btn-view-order {
+    width: 100%;
+    background: transparent;
+    border: 1.5px solid var(--k-border-strong);
+    border-radius: var(--k-radius-md);
+    color: var(--k-text-primary);
+    font-family: var(--font-kitchen);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.15s;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+    .btn-view-order:hover {
+        background: var(--k-bg-card-hover);
+        color: var(--k-text-primary);
+        text-decoration: none;
+    }
+
+/* ── Badges ── */
+.badge-type, .badge-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 11px;
+    border-radius: 999px;
+    font-family: var(--font-kitchen);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
+.badge-dinein {
+    background: var(--k-badge-dinein-bg);
+    color: var(--k-badge-dinein-text);
+}
+
+.badge-pickup {
+    background: var(--k-badge-pickup-bg);
+    color: var(--k-badge-pickup-text);
+}
+
+.badge-pending {
+    background: var(--k-status-pending-bg);
+    color: var(--k-status-pending-text);
+}
+
+.badge-preparing {
+    background: var(--k-status-preparing-bg);
+    color: var(--k-status-preparing-text);
+}
+
+.badge-ready {
+    background: var(--k-status-ready-bg);
+    color: var(--k-status-ready-text);
+}
+
+.badge-cancelled {
+    background: var(--k-status-cancelled-bg);
+    color: var(--k-status-cancelled-text);
+}
+
+/* ── Detail Page ── */
+.detail-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 36px 32px;
+    font-family: var(--font-kitchen);
+}
+
+.detail-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.detail-order-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--k-text-primary);
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.detail-status-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f59e0b;
+    margin-right: 14px;
+}
+
+.detail-divider {
+    border: none;
+    border-top: 1px solid var(--k-border);
+    margin: 22px 0;
+}
+
+.detail-section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--k-text-primary);
+    margin-bottom: 16px;
+}
+
+/* ── Items List ── */
+.order-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--k-border);
+    gap: 16px;
+}
+
+    .order-item-row:last-child {
+        border-bottom: none;
+    }
+
+.order-item-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--k-text-primary);
+    margin-bottom: 3px;
+}
+
+.order-item-note {
+    font-size: 13px;
+    color: var(--k-text-secondary);
+}
+
+/* ── Kitchen Status Select ── */
+.kitchen-status-select {
+    font-family: var(--font-kitchen);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    min-width: 90px;
+    text-align: center;
+}
+
+    .kitchen-status-select.ks-pending {
+        background: var(--k-status-pending-bg);
+        color: var(--k-status-pending-text);
+    }
+
+    .kitchen-status-select.ks-cooking {
+        background: var(--k-status-preparing-bg);
+        color: var(--k-status-preparing-text);
+    }
+
+    .kitchen-status-select.ks-ready {
+        background: var(--k-status-ready-bg);
+        color: var(--k-status-ready-text);
+    }
+
+/* ── Notes ── */
+.detail-notes-text {
+    font-size: 14px;
+    color: var(--k-text-secondary);
+    line-height: 1.6;
+    min-height: 20px;
+}
+
+/* ── Footer ── */
+.detail-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-top: 4px;
+}
+
+.detail-eta {
+    font-size: 15px;
+    color: var(--k-text-primary);
+}
+
+    .detail-eta strong {
+        font-weight: 700;
+    }
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    font-family: var(--font-kitchen);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 22px;
+    border-radius: var(--k-radius-md);
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+    .btn-action:hover {
+        transform: translateY(-1px);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .btn-action:active {
+        transform: scale(0.98);
+    }
+
+.btn-start {
+    background: var(--k-btn-yellow);
+}
+
+    .btn-start:hover {
+        background: var(--k-btn-yellow-h);
+    }
+
+.btn-ready {
+    background: var(--k-btn-green);
+}
+
+    .btn-ready:hover {
+        background: var(--k-btn-green-h);
+    }
+
+.btn-cancel {
+    background: var(--k-btn-red);
+}
+
+    .btn-cancel:hover {
+        background: var(--k-btn-red-h);
+    }
+
+/* ── Empty State ── */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--k-text-muted);
+    font-size: 15px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .kitchen-wrapper, .detail-wrapper {
+        padding: 20px 16px;
+    }
+
+    .kitchen-title, .detail-order-title {
+        font-size: 1.5rem;
+    }
+
+    .detail-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .action-buttons {
+        width: 100%;
+    }
+
+    .btn-action {
+        flex: 1;
+        justify-content: center;
+    }
 }

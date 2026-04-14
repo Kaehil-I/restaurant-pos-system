@@ -17,5 +17,6 @@
         public decimal Price { get; set; }
 
         public string KitchenStatus { get; set; } // Pending, Cooking, Ready
+        public string? Note { get; set; }
     }
 }

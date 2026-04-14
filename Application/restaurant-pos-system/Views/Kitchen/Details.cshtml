@@ -1,51 +1,141 @@
 ﻿@model restaurant_pos_system.Models.Order
-
 @{
-    ViewData["Title"] = "Order Details";
+    ViewData["Title"] = $"Order #{Model.Id}";
+    Layout = "~/Views/Shared/_KitchenLayout.cshtml";
+    var orderType  = Model.RestaurantTable != null ? "Dine-In" : "Pickup";
+    var statusSlug = Model.Status?.ToLower().Replace(" ", "") ?? "pending";
 }
 
-<div class="container mt-4">
-    <h3>Order #@Model.Id - Table @Model.RestaurantTable?.TableNumber</h3>
-    <p>Waitron: @Model.Waitron?.UserName</p>
-    <p>Status: @Model.Status</p>
-    <p>Created: @Model.CreatedAt.ToString("g")</p>
+<div class="detail-wrapper">
 
-    <hr />
+    <div class="detail-top">
+        <div>
+            <h1 class="detail-order-title">Order #@Model.Id</h1>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+                @if (orderType == "Dine-In")
+                {
+                    <span class="badge-type badge-dinein">Dine-In</span>
+                }
+                else
+                {
+                    <span class="badge-type badge-pickup">Pickup</span>
+                }
+                @if (Model.RestaurantTable != null)
+                {
+                    <span class="badge-status badge-pending">
+                        Table @Model.RestaurantTable.TableNumber
+                    </span>
+                }
+            </div>
+        </div>
 
-    <h5>Items</h5>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Item</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th>Kitchen Status</th>
-                <th>Update Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.OrderItems)
-            {
-                <tr>
-                    <td>@item.MenuItem.Name</td>
-                    <td>@item.Quantity</td>
-                    <td>@item.Price.ToString("C")</td>
-                    <td>@item.KitchenStatus</td>
-                    <td>
-                        <form asp-action="UpdateItemStatus" method="post">
-                            <input type="hidden" name="orderItemId" value="@item.Id" />
-                            <select name="status" class="form-select form-select-sm mb-1">
-                                <option value="Pending" selected="@(item.KitchenStatus == "Pending")">Pending</option>
-                                <option value="Cooking" selected="@(item.KitchenStatus == "Cooking")">Cooking</option>
-                                <option value="Ready" selected="@(item.KitchenStatus == "Ready")">Ready</option>
-                            </select>
-                            <button type="submit" class="btn btn-sm btn-primary w-100">Update</button>
-                        </form>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+        <div style="display:flex; align-items:center; gap:14px;">
+            <span class="detail-status-label">@Model.Status</span>
+            <button class="theme-toggle-btn" id="themeToggle" title="Toggle theme">
+                <span id="themeIcon">🌙</span>
+                <span class="theme-sep">/</span>
+                <span>☀️</span>
+            </button>
+        </div>
+    </div>
 
-    <a asp-action="Dashboard" class="btn btn-secondary mt-3">Back to Dashboard</a>
+    <hr class="detail-divider" />
+
+    <h2 class="detail-section-title">Order Items</h2>
+
+    <ul class="order-items-list">
+        @foreach (var item in Model.OrderItems)
+        {
+            var ksSlug = item.KitchenStatus?.ToLower() ?? "pending";
+            <li class="order-item-row">
+                <div>
+                    <p class="order-item-name">@item.Quantity x @item.MenuItem.Name</p>
+                    @if (!string.IsNullOrWhiteSpace(item.Note))
+                    {
+                        <p class="order-item-note">@item.Note</p>
+                    }
+                </div>
+
+                <form asp-action="UpdateItemStatus" method="post" style="margin:0;">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="orderItemId" value="@item.Id" />
+                    <select name="status"
+                            class="kitchen-status-select ks-@ksSlug"
+                            onchange="this.form.submit(); updateSelectStyle(this);">
+                        <option value="Pending" @(item.KitchenStatus == "Pending" ? "selected" : "")>Pending</option>
+                        <option value="Cooking" @(item.KitchenStatus == "Cooking" ? "selected" : "")>Cooking</option>
+                        <option value="Ready"   @(item.KitchenStatus == "Ready"   ? "selected" : "")>Ready</option>
+                    </select>
+                </form>
+            </li>
+        }
+    </ul>
+
+    <hr class="detail-divider" />
+
+    <h2 class="detail-section-title">Notes</h2>
+    <p class="detail-notes-text">
+        @(string.IsNullOrWhiteSpace(Model.Notes) ? "No special notes." : Model.Notes)
+    </p>
+
+    <hr class="detail-divider" />
+
+    <div class="detail-footer">
+        <p class="detail-eta"><strong>ETA:</strong> @(ViewBag.ETA ?? 15) minutes</p>
+
+        <div class="action-buttons">
+            <form asp-action="UpdateOrderStatus" method="post" style="margin:0;">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="orderId" value="@Model.Id" />
+                <input type="hidden" name="status"  value="Preparing" />
+                <button type="submit" class="btn-action btn-start">Start Preparing</button>
+            </form>
+
+            <form asp-action="UpdateOrderStatus" method="post" style="margin:0;">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="orderId" value="@Model.Id" />
+                <input type="hidden" name="status"  value="Ready" />
+                <button type="submit" class="btn-action btn-ready">Mark as Ready</button>
+            </form>
+
+            <form asp-action="UpdateOrderStatus" method="post" style="margin:0;"
+                  onsubmit="return confirm('Cancel order #@Model.Id?');">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="orderId" value="@Model.Id" />
+                <input type="hidden" name="status"  value="Cancelled" />
+                <button type="submit" class="btn-action btn-cancel">Cancel Order</button>
+            </form>
+        </div>
+    </div>
+
 </div>
+
+@section Scripts {
+<script>
+    (function () {
+        const btn  = document.getElementById('themeToggle');
+        const icon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        const saved = localStorage.getItem('kitchen-theme') || 'light';
+        icon.textContent = saved === 'dark' ? '☀️' : '🌙';
+
+        btn.addEventListener('click', function () {
+            const isDark = html.getAttribute('data-bs-theme') === 'dark';
+            const next = isDark ? 'light' : 'dark';
+            html.setAttribute('data-bs-theme', next);
+            html.classList.toggle('dark-mode', next === 'dark');
+            icon.textContent = next === 'dark' ? '☀️' : '🌙';
+            localStorage.setItem('kitchen-theme', next);
+        });
+    })();
+
+    function updateSelectStyle(sel) {
+        sel.className = 'kitchen-status-select';
+        const map = { Pending: 'ks-pending', Cooking: 'ks-cooking', Ready: 'ks-ready' };
+        sel.classList.add(map[sel.value] || 'ks-pending');
+    }
+
+    document.querySelectorAll('.kitchen-status-select').forEach(updateSelectStyle);
+</script>
+}
