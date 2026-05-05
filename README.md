@@ -30,3 +30,23 @@ Diya – Sales System
 Greg – Booking & Authentication
 
 Zario – Admin Dashboard
+
+
+
+
+## 👥 Development Team
+
+| Name | Student Number | Role |
+|------|---------------|------|
+| Kaehil Indurjeeth | ST10438880 | Order Creation Module |
+| Gregory Luyckfasseel | ST10441344 | Booking & Authentication |
+| Zario Di Paolo | ST10441349 | Admin Dashboard |
+| Kyra Naidoo | ST10448414 | Kitchen Dashboard |
+| Diya Lakha | ST10439176 | Sales System |
+
+
+
+🗄️ Database Script
+
+<img width="416" height="894" alt="image" src="https://github.com/user-attachments/assets/323b9364-87b2-41f2-aad9-88aa299131ba" />
+
