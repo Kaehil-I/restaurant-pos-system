@@ -1,0 +1,53 @@
+﻿@model restaurant_pos_system.Models.Order
+@{
+    ViewData["Title"] = "Receipt";
+}
+
+<div class="container mt-4" style="max-width: 500px;">
+    <div class="card p-4 shadow">
+        <h3 class="text-center">🧾 Emerald POS</h3>
+        <hr />
+        <p><strong>Order #:</strong> @Model.Id</p>
+        <p><strong>Table:</strong> @Model.RestaurantTable?.TableNumber</p>
+        <p><strong>Date:</strong> @Model.CreatedAt.ToString("dd MMM yyyy HH:mm")</p>
+        <hr />
+
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.OrderItems)
+                {
+                    <tr>
+                        <td>@item.MenuItem?.Name</td>
+                        <td>@item.Quantity</td>
+                        <td>R @item.Price.ToString("F2")</td>
+                        <td>R @((item.Price * item.Quantity).ToString("F2"))</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <hr />
+        <h5 class="text-end">Total: R @Model.OrderItems.Sum(i => i.Price * i.Quantity).ToString("F2")</h5>
+
+        @if (Model.Payment != null)
+        {
+            <p><strong>Payment Method:</strong> @Model.Payment.PaymentMethod</p>
+            <p><strong>Paid At:</strong> @Model.Payment.PaidAt.ToString("dd MMM yyyy HH:mm")</p>
+        }
+
+        <hr />
+        <p class="text-center text-muted">Thank you for dining with us!</p>
+        <div class="text-center mt-2">
+            <button class="btn btn-primary" onclick="window.print()">🖨️ Print Receipt</button>
+            <a href="/Sales" class="btn btn-secondary">← Back</a>
+        </div>
+    </div>
+</div>

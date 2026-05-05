@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using restaurant_pos_system.Data;
 using restaurant_pos_system.Models;
 
 namespace restaurant_pos_system.Controllers

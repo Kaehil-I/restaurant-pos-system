@@ -2,8 +2,7 @@
 @{
     ViewData["Title"] = $"Order #{Model.Id}";
     Layout = "~/Views/Shared/_KitchenLayout.cshtml";
-    var orderType  = Model.RestaurantTable != null ? "Dine-In" : "Pickup";
-    var statusSlug = Model.Status?.ToLower().Replace(" ", "") ?? "pending";
+    var orderType = Model.RestaurantTable != null ? "Dine-In" : "Pickup";
 }
 
 <div class="detail-wrapper">
@@ -62,9 +61,9 @@
                     <select name="status"
                             class="kitchen-status-select ks-@ksSlug"
                             onchange="this.form.submit(); updateSelectStyle(this);">
-                        <option value="Pending" @(item.KitchenStatus == "Pending" ? "selected" : "")>Pending</option>
-                        <option value="Cooking" @(item.KitchenStatus == "Cooking" ? "selected" : "")>Cooking</option>
-                        <option value="Ready"   @(item.KitchenStatus == "Ready"   ? "selected" : "")>Ready</option>
+                        <option value="Pending" selected="@(item.KitchenStatus == "Pending")">Pending</option>
+                        <option value="Cooking" selected="@(item.KitchenStatus == "Cooking")">Cooking</option>
+                        <option value="Ready" selected="@(item.KitchenStatus == "Ready")">Ready</option>
                     </select>
                 </form>
             </li>
@@ -87,14 +86,14 @@
             <form asp-action="UpdateOrderStatus" method="post" style="margin:0;">
                 @Html.AntiForgeryToken()
                 <input type="hidden" name="orderId" value="@Model.Id" />
-                <input type="hidden" name="status"  value="Preparing" />
+                <input type="hidden" name="status" value="Preparing" />
                 <button type="submit" class="btn-action btn-start">Start Preparing</button>
             </form>
 
             <form asp-action="UpdateOrderStatus" method="post" style="margin:0;">
                 @Html.AntiForgeryToken()
                 <input type="hidden" name="orderId" value="@Model.Id" />
-                <input type="hidden" name="status"  value="Ready" />
+                <input type="hidden" name="status" value="Ready" />
                 <button type="submit" class="btn-action btn-ready">Mark as Ready</button>
             </form>
 
@@ -102,7 +101,7 @@
                   onsubmit="return confirm('Cancel order #@Model.Id?');">
                 @Html.AntiForgeryToken()
                 <input type="hidden" name="orderId" value="@Model.Id" />
-                <input type="hidden" name="status"  value="Cancelled" />
+                <input type="hidden" name="status" value="Cancelled" />
                 <button type="submit" class="btn-action btn-cancel">Cancel Order</button>
             </form>
         </div>
@@ -111,31 +110,31 @@
 </div>
 
 @section Scripts {
-<script>
-    (function () {
-        const btn  = document.getElementById('themeToggle');
-        const icon = document.getElementById('themeIcon');
-        const html = document.documentElement;
+    <script>
+        (function () {
+            const btn  = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            const html = document.documentElement;
 
-        const saved = localStorage.getItem('kitchen-theme') || 'light';
-        icon.textContent = saved === 'dark' ? '☀️' : '🌙';
+            const saved = localStorage.getItem('kitchen-theme') || 'light';
+            icon.textContent = saved === 'dark' ? '☀️' : '🌙';
 
-        btn.addEventListener('click', function () {
-            const isDark = html.getAttribute('data-bs-theme') === 'dark';
-            const next = isDark ? 'light' : 'dark';
-            html.setAttribute('data-bs-theme', next);
-            html.classList.toggle('dark-mode', next === 'dark');
-            icon.textContent = next === 'dark' ? '☀️' : '🌙';
-            localStorage.setItem('kitchen-theme', next);
-        });
-    })();
+            btn.addEventListener('click', function () {
+                const isDark = html.getAttribute('data-bs-theme') === 'dark';
+                const next = isDark ? 'light' : 'dark';
+                html.setAttribute('data-bs-theme', next);
+                html.classList.toggle('dark-mode', next === 'dark');
+                icon.textContent = next === 'dark' ? '☀️' : '🌙';
+                localStorage.setItem('kitchen-theme', next);
+            });
+        })();
 
-    function updateSelectStyle(sel) {
-        sel.className = 'kitchen-status-select';
-        const map = { Pending: 'ks-pending', Cooking: 'ks-cooking', Ready: 'ks-ready' };
-        sel.classList.add(map[sel.value] || 'ks-pending');
-    }
+        function updateSelectStyle(sel) {
+            sel.className = 'kitchen-status-select';
+            const map = { Pending: 'ks-pending', Cooking: 'ks-cooking', Ready: 'ks-ready' };
+            sel.classList.add(map[sel.value] || 'ks-pending');
+        }
 
-    document.querySelectorAll('.kitchen-status-select').forEach(updateSelectStyle);
-</script>
+        document.querySelectorAll('.kitchen-status-select').forEach(updateSelectStyle);
+    </script>
 }

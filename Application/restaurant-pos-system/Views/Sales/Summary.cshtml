@@ -1,0 +1,59 @@
+﻿@model IEnumerable<restaurant_pos_system.Models.Payment>
+@{
+    ViewData["Title"] = "Sales Summary";
+}
+
+<div class="container mt-4">
+    <h2>📊 Today's Sales Summary</h2>
+    <a href="/Sales" class="btn btn-secondary mb-3">← Back to Sales</a>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-success p-3 text-center">
+                <h5>Total Revenue</h5>
+                <h3>R @ViewBag.TotalSales.ToString("F2")</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-primary p-3 text-center">
+                <h5>Orders Paid</h5>
+                <h3>@ViewBag.TotalOrders</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning p-3 text-center">
+                <h5>Cash Sales</h5>
+                <h3>R @ViewBag.CashTotal.ToString("F2")</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-info p-3 text-center">
+                <h5>Card Sales</h5>
+                <h3>R @ViewBag.CardTotal.ToString("F2")</h3>
+            </div>
+        </div>
+    </div>
+
+    <h4>Transactions</h4>
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Order #</th>
+                <th>Amount</th>
+                <th>Method</th>
+                <th>Paid At</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var payment in Model)
+            {
+                <tr>
+                    <td>@payment.OrderId</td>
+                    <td>R @payment.TotalAmount.ToString("F2")</td>
+                    <td>@payment.PaymentMethod</td>
+                    <td>@payment.PaidAt.ToString("HH:mm")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
