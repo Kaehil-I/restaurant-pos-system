@@ -1,59 +1,78 @@
 ﻿@model IEnumerable<restaurant_pos_system.Models.Order>
 @{
     ViewData["Title"] = "Kitchen Dashboard";
-    Layout = "~/Views/Shared/_KitchenLayout.cshtml";
+    Layout = null;
 }
-
-<div class="kitchen-wrapper">
-
-    <div class="kitchen-header">
-        <h1 class="kitchen-title">Kitchen Dashboard</h1>
-        <div class="header-controls">
-            <span class="total-badge">Total Orders: @Model.Count()</span>
-            <button class="theme-toggle-btn" id="themeToggle" title="Toggle dark/light mode">
-                <span id="themeIcon">🌙</span>
-                <span class="theme-sep">/</span>
-                <span>☀️</span>
-            </button>
-        </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Kitchen Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta http-equiv="refresh" content="20">
+</head>
+<body class="bg-dark text-white">
+    <nav class="navbar navbar-dark bg-black px-4">
+        <span class="navbar-brand fw-bold">🍳 Kitchen Dashboard</span>
+        <span class="text-muted small">Auto-refreshes every 20s</span>
+        <a href="/Account/Logout" class="btn btn-outline-light btn-sm">Logout</a>
+    </nav>
+    <div class="container-fluid mt-4">
+        @if (!Model.Any())
+        {
+            <div class="text-center mt-5">
+                <h3 class="text-muted">✅ No active orders — all clear!</h3>
+            </div>
+        }
+        else
+        {
+            <div class="row g-3">
+                @foreach (var order in Model)
+                {
+                    var borderColor = order.Status == "Ready" ? "success" : order.Status == "Preparing" ? "warning" : "secondary";
+                    var allReady = order.OrderItems.All(i => i.KitchenStatus == "Ready");
+                    <div class="col-md-4 col-lg-3">
+                        <div class="card border-@borderColor border-2 text-dark bg-light">
+                            <div class="card-header d-flex justify-content-between align-items-center
+                                    @(order.Status == "Ready" ? "bg-success text-white" : order.Status == "Preparing" ? "bg-warning" : "bg-secondary text-white")">
+                                <strong>Order #@order.Id</strong>
+                                <span class="small">Table @order.RestaurantTable?.TableNumber</span>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted small mb-1">📅 @order.CreatedAt.ToString("HH:mm")</p>
+                                <ul class="list-unstyled mb-2">
+                                    @foreach (var item in order.OrderItems)
+                                    {
+                                        var icon = item.KitchenStatus == "Ready" ? "✅" : item.KitchenStatus == "Cooking" ? "🔥" : "⏳";
+                                        <li>@icon @item.Quantity× @item.MenuItem?.Name</li>
+                                    }
+                                </ul>
+                                @if (!string.IsNullOrWhiteSpace(order.Notes))
+                                {
+                                    <p class="text-muted small">📝 @order.Notes</p>
+                                }
+                                <div class="d-grid gap-1 mt-2">
+                                    <a href="/Kitchen/Details/@order.Id" class="btn btn-dark btn-sm">⚙️ Manage Order</a>
+                                    @if (order.Status != "Ready")
+                                    {
+                                        <form method="post" action="/Kitchen/UpdateOrderStatus" style="margin:0;">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="orderId" value="@order.Id" />
+                                            <input type="hidden" name="status" value="Ready" />
+                                            <button type="submit" class="btn btn-success btn-sm w-100">✅ Mark Ready</button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <span class="btn btn-outline-success btn-sm disabled">✅ Ready for collection</span>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
     </div>
-
-    @if (!Model.Any())
-    {
-        <div class="empty-state">
-            <p>No active orders right now.</p>
-        </div>
-    }
-    else
-    {
-        <div class="orders-grid">
-            @foreach (var order in Model)
-            {
-                @await Html.PartialAsync("_OrderCard", order)
-            }
-        </div>
-    }
-
-</div>
-
-@section Scripts {
-    <script>
-        (function () {
-            const btn  = document.getElementById('themeToggle');
-            const icon = document.getElementById('themeIcon');
-            const html = document.documentElement;
-
-            const saved = localStorage.getItem('kitchen-theme') || 'light';
-            icon.textContent = saved === 'dark' ? '☀️' : '🌙';
-
-            btn.addEventListener('click', function () {
-                const isDark = html.getAttribute('data-bs-theme') === 'dark';
-                const next = isDark ? 'light' : 'dark';
-                html.setAttribute('data-bs-theme', next);
-                html.classList.toggle('dark-mode', next === 'dark');
-                icon.textContent = next === 'dark' ? '☀️' : '🌙';
-                localStorage.setItem('kitchen-theme', next);
-            });
-        })();
-    </script>
-}
+</body>
+</html>

@@ -1,6 +1,4 @@
-using System;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,23 +14,20 @@ namespace restaurant_pos_system
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(
+                    builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            // Register Identity (with roles) and EF stores
             builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
-                {
-                    options.SignIn.RequireConfirmedAccount = false;
-                })
-                .AddRoles<IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+            })
+            .AddRoles<IdentityRole>()
+            .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            // Configure cookie settings so unauthorized requests are redirected to the Account controller Login
             builder.Services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = "/Account/Login";
@@ -41,7 +36,7 @@ namespace restaurant_pos_system
 
             var app = builder.Build();
 
-            // Seed roles and example users (synchronous for Main; OK for dev seed)
+            // Seed database
             try
             {
                 using (var scope = app.Services.CreateScope())
@@ -50,89 +45,49 @@ namespace restaurant_pos_system
                     var logger = services.GetRequiredService<ILogger<Program>>();
                     var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-                    
-                    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                    var db = services.GetRequiredService<ApplicationDbContext>();
+
                     db.Database.Migrate();
-                    
 
-                    logger.LogInformation("Starting DB seed.");
-
+                    // Create roles
                     var roles = new[] { "Manager", "Waiter", "Kitchen" };
                     foreach (var r in roles)
                     {
-                        var exists = roleManager.RoleExistsAsync(r).GetAwaiter().GetResult();
-                        if (!exists)
-                        {
-                            var rr = roleManager.CreateAsync(new IdentityRole(r)).GetAwaiter().GetResult();
-                            if (!rr.Succeeded)
-                            {
-                                logger.LogError("Failed to create role {Role}: {Errors}", r, string.Join(", ", rr.Errors));
-                            }
-                            else
-                            {
-                                logger.LogInformation("Created role {Role}", r);
-                            }
-                        }
+                        if (!roleManager.RoleExistsAsync(r).GetAwaiter().GetResult())
+                            roleManager.CreateAsync(new IdentityRole(r)).GetAwaiter().GetResult();
                     }
 
-                    // Helper to create a user if missing and set PinHash + role
+                    // Create users with PINs
                     void EnsureUser(string userName, string email, string role, string pin)
                     {
-                        try
+                        var user = userManager.FindByNameAsync(userName).GetAwaiter().GetResult();
+                        if (user == null)
                         {
-                            var user = userManager.FindByNameAsync(userName).GetAwaiter().GetResult();
-                            if (user == null)
+                            user = new ApplicationUser
                             {
-                                user = new ApplicationUser
-                                {
-                                    UserName = userName,
-                                    Email = email,
-                                    RoleType = role
-                                };
-
-                                // Hash the PIN and set PinHash BEFORE creating the user so EF won't complain about missing required property.
-                                var pinHash = userManager.PasswordHasher.HashPassword(user, pin);
-                                user.PinHash = pinHash;
-
-                                var createResult = userManager.CreateAsync(user).GetAwaiter().GetResult();
-                                if (!createResult.Succeeded)
-                                {
-                                    logger.LogError("Failed creating user {User}: {Errors}", userName, string.Join(", ", createResult.Errors));
-                                    return;
-                                }
-
-                                var addRoleResult = userManager.AddToRoleAsync(user, role).GetAwaiter().GetResult();
-                                if (!addRoleResult.Succeeded)
-                                {
-                                    logger.LogError("Failed adding user {User} to role {Role}: {Errors}", userName, role, string.Join(", ", addRoleResult.Errors));
-                                }
-                                else
-                                {
-                                    logger.LogInformation("Created user {User} with role {Role}", userName, role);
-                                }
-                            }
-                        }
-                        catch (Exception userEx)
-                        {
-                            logger.LogError(userEx, "Failed creating or updating user {User}", userName);
+                                UserName = userName,
+                                Email = email,
+                                RoleType = role
+                            };
+                            user.PinHash = userManager.PasswordHasher.HashPassword(user, pin);
+                            userManager.CreateAsync(user).GetAwaiter().GetResult();
+                            userManager.AddToRoleAsync(user, role).GetAwaiter().GetResult();
+                            logger.LogInformation("Created user {User} PIN={Pin}", userName, pin);
                         }
                     }
 
-                    EnsureUser("manager", "manager@example.com", "Manager", "1234");
-                    EnsureUser("waiter", "waiter@example.com", "Waiter", "2345");
-                    EnsureUser("kitchen", "kitchen@example.com", "Kitchen", "3456");
-
-                    logger.LogInformation("DB seed completed.");
+                    // PIN 1234 = Manager, PIN 2345 = Waiter, PIN 3456 = Kitchen
+                    EnsureUser("manager", "manager@pos.com", "Manager", "1234");
+                    EnsureUser("waiter", "waiter@pos.com", "Waiter", "2345");
+                    EnsureUser("kitchen", "kitchen@pos.com", "Kitchen", "3456");
                 }
             }
             catch (Exception ex)
             {
                 var logger = app.Services.GetRequiredService<ILogger<Program>>();
-                logger.LogError(ex, "An exception occurred while seeding the database.");
-                // Do not rethrow so you can start the host and inspect logs in the browser/Output window.
+                logger.LogError(ex, "Seeding failed.");
             }
 
-            // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -141,21 +96,15 @@ namespace restaurant_pos_system
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
-            // Authentication must be enabled before authorization
             app.UseAuthentication();
             app.UseAuthorization();
 
-            // Default route changed to start at the login screen
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Account}/{action=Login}/{id?}");
 
-            // Map Razor Pages (project contains Razor Pages)
             app.MapRazorPages();
-
             app.Run();
         }
     }

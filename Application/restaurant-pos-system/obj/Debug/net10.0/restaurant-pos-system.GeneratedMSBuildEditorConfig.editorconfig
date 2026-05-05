@@ -62,6 +62,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxPcmRlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/lab_services_student/Documents/GitHub/restaurant-pos-system/Application/restaurant-pos-system/Views/Manager/Reservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxSZXNlcnZhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/Documents/GitHub/restaurant-pos-system/Application/restaurant-pos-system/Views/Manager/Sales.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxTYWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lab_services_student/Documents/GitHub/restaurant-pos-system/Application/restaurant-pos-system/Views/Manager/Staff.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxTdGFmZi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -104,6 +112,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/lab_services_student/Documents/GitHub/restaurant-pos-system/Application/restaurant-pos-system/Views/Waitron/MyTables.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2FpdHJvblxNeVRhYmxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lab_services_student/Documents/GitHub/restaurant-pos-system/Application/restaurant-pos-system/Views/Waitron/TableOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2FpdHJvblxUYWJsZU9yZGVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lab_services_student/Documents/GitHub/restaurant-pos-system/Application/restaurant-pos-system/Views/_ViewImports.cshtml]

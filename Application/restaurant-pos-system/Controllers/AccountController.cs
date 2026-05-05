@@ -2,10 +2,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using restaurant_pos_system.Models;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace restaurant_pos_system.Controllers 
+namespace restaurant_pos_system.Controllers
 {
     public class AccountController : Controller
     {
@@ -20,7 +18,6 @@ namespace restaurant_pos_system.Controllers
             _signInManager = signInManager;
         }
 
-        // LOGIN - GET
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Login()
@@ -28,7 +25,6 @@ namespace restaurant_pos_system.Controllers
             return View();
         }
 
-        // LOGIN - POST
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -37,7 +33,7 @@ namespace restaurant_pos_system.Controllers
             if (!ModelState.IsValid)
                 return View(model);
 
-            // Find user by selected role
+            // Find user by role
             var user = _userManager.Users
                 .FirstOrDefault(u => u.RoleType == model.Role);
 
@@ -47,7 +43,7 @@ namespace restaurant_pos_system.Controllers
                 return View(model);
             }
 
-            // Verify PIN against stored hashed value
+            // Verify PIN
             var result = _userManager.PasswordHasher
                 .VerifyHashedPassword(user, user.PinHash, model.Pin);
 
@@ -55,11 +51,10 @@ namespace restaurant_pos_system.Controllers
             {
                 await _signInManager.SignInAsync(user, isPersistent: false);
 
-                // Redirect based on role
                 return model.Role switch
                 {
                     "Manager" => RedirectToAction("Dashboard", "Manager"),
-                    "Waiter" => RedirectToAction("Dashboard", "Waiter"),
+                    "Waiter" => RedirectToAction("MyTables", "Waitron"),
                     "Kitchen" => RedirectToAction("Dashboard", "Kitchen"),
                     _ => RedirectToAction("Login")
                 };
@@ -69,7 +64,6 @@ namespace restaurant_pos_system.Controllers
             return View(model);
         }
 
-        // LOGOUT
         [Authorize]
         public async Task<IActionResult> Logout()
         {
@@ -77,7 +71,6 @@ namespace restaurant_pos_system.Controllers
             return RedirectToAction("Login");
         }
 
-        // ACCESS DENIED
         [HttpGet]
         public IActionResult AccessDenied()
         {
