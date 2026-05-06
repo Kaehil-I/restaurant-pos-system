@@ -1,31 +1,20 @@
-﻿@{
-    ViewData["Title"] = "My Tables";
-}
+﻿@model List<restaurant_pos_system.Models.RestaurantTable>
 
 <h1>My Tables</h1>
 
 <div class="tables-grid">
+    @foreach (var table in Model)
+    {
+        <div class="table-card">
+            <h3>Table @table.TableNumber</h3>
+            <p>Status: @table.Status</p>
 
-    <div class="table-card">
-        <h3>Table 1</h3>
-        <p>Status: Occupied</p>
-        <a asp-controller="Waitron"
-           asp-action="CreateOrder"
-           asp-route-tableId="1"
-           class="btn-primary">
-            Open Order
-        </a>
-    </div>
-
-    <div class="table-card">
-        <h3>Table 2</h3>
-        <p>Status: Available</p>
-        <a asp-controller="Waitron"
-           asp-action="CreateOrder"
-           asp-route-tableId="2"
-           class="btn-primary">
-            Create Order
-        </a>
-    </div>
-
+            <a asp-controller="Waitron"
+               asp-action="CreateOrder"
+               asp-route-tableId="@table.Id"
+               class="btn-primary">
+                Open Order
+            </a>
+        </div>
+    }
 </div>
