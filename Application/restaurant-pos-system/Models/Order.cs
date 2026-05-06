@@ -1,6 +1,4 @@
-﻿using restaurant_pos_system.Models;
-
-namespace restaurant_pos_system.Models
+﻿namespace restaurant_pos_system.Models
 {
     public class Order
     {
@@ -16,7 +14,9 @@ namespace restaurant_pos_system.Models
 
         public DateTime CreatedAt { get; set; }
 
-        public string Status { get; set; } // Open, InProgress, Completed, Paid
+        public string Status { get; set; }
+
+        public string? Notes { get; set; }
 
         public ICollection<OrderItem> OrderItems { get; set; }
 

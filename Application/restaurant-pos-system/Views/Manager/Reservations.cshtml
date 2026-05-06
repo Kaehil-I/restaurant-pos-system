@@ -1,0 +1,70 @@
+﻿@model IEnumerable<restaurant_pos_system.Models.Reservation>
+@{
+    ViewData["Title"] = "Reservations";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Reservations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark px-4">
+        <span class="navbar-brand fw-bold">💎 Reservations</span>
+        <a href="/Manager/Dashboard" class="btn btn-outline-light btn-sm">← Dashboard</a>
+    </nav>
+    <div class="container mt-4">
+        <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addResModal">+ New Reservation</button>
+        <table class="table table-bordered bg-white shadow-sm">
+            <thead class="table-dark">
+                <tr><th>Customer</th><th>Phone</th><th>Guests</th><th>Table</th><th>Date & Time</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var r in Model)
+                {
+                    <tr>
+                        <td>@r.CustomerName</td>
+                        <td>@r.PhoneNumber</td>
+                        <td>@r.NumberOfGuests</td>
+                        <td>Table @r.RestaurantTable?.TableNumber</td>
+                        <td>@r.ReservationTime.ToString("dd MMM yyyy HH:mm")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="addResModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title">New Reservation</h5></div>
+                <form method="post" action="/Manager/AddReservation">
+                    @Html.AntiForgeryToken()
+                    <div class="modal-body">
+                        <div class="mb-2"><label>Customer Name</label><input name="customerName" class="form-control" required /></div>
+                        <div class="mb-2"><label>Phone</label><input name="phoneNumber" class="form-control" required /></div>
+                        <div class="mb-2"><label>Date & Time</label><input name="reservationTime" type="datetime-local" class="form-control" required /></div>
+                        <div class="mb-2"><label>Guests</label><input name="numberOfGuests" type="number" class="form-control" required /></div>
+                        <div class="mb-2">
+                            <label>Table</label>
+                            <select name="tableId" class="form-select">
+                                @foreach (var t in ViewBag.Tables as IEnumerable<restaurant_pos_system.Models.RestaurantTable>)
+                                {
+                                    <option value="@t.Id">Table @t.TableNumber (@t.Status)</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Save</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

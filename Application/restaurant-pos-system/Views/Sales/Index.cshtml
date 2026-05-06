@@ -1,0 +1,38 @@
+﻿@model IEnumerable<restaurant_pos_system.Models.Order>
+@{
+    ViewData["Title"] = "Sales";
+}
+
+<div class="container mt-4">
+    <h2>💰 Sales — Paid Orders</h2>
+    <a href="/Sales/Summary" class="btn btn-success mb-3">📊 View Today's Summary</a>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Order #</th>
+                <th>Table</th>
+                <th>Date</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Receipt</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                decimal total = order.OrderItems.Sum(i => i.Price * i.Quantity);
+                <tr>
+                    <td>@order.Id</td>
+                    <td>Table @order.RestaurantTable?.TableNumber</td>
+                    <td>@order.CreatedAt.ToString("dd MMM yyyy HH:mm")</td>
+                    <td>@order.OrderItems.Count items</td>
+                    <td>R @total.ToString("F2")</td>
+                    <td>
+                        <a href="/Sales/Receipt/@order.Id" class="btn btn-sm btn-outline-primary">View Receipt</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
