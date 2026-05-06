@@ -59,16 +59,12 @@
                 <form asp-action="UpdateItemStatus" method="post" style="margin:0;">
                     @Html.AntiForgeryToken()
                     <input type="hidden" name="orderItemId" value="@item.Id" />
-                    @{
-                        var statuses = new[] { "Pending", "Cooking", "Ready" };
-                    }
                     <select name="status"
                             class="kitchen-status-select ks-@ksSlug"
                             onchange="this.form.submit(); updateSelectStyle(this);">
-                        @foreach (var status in statuses)
-                        {
-                            <option value="@status" selected="@(item.KitchenStatus == status ? "selected" : null)">@status</option>
-                        }
+                        <option value="Pending" @(item.KitchenStatus == "Pending" ? "selected" : "")>Pending</option>
+                        <option value="Cooking" @(item.KitchenStatus == "Cooking" ? "selected" : "")>Cooking</option>
+                        <option value="Ready"   @(item.KitchenStatus == "Ready"   ? "selected" : "")>Ready</option>
                     </select>
                 </form>
             </li>

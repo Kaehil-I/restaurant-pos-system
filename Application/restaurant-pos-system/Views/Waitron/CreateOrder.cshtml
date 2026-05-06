@@ -1,62 +1,29 @@
-﻿@model restaurant_pos_system.Models.Order
+﻿@{
+    ViewData["Title"] = "Create Order";
+    var tableId = ViewBag.TableId;
+}
 
 <h1>Create Order</h1>
 
+<h3>Table @tableId</h3>
+
 <div class="order-section">
 
-    @foreach (var category in ViewBag.MenuCategories)
-    {
-        <div class="menu-category">
-            <h4>@category.Name</h4>
+    <div class="menu-category">
+        <h4>Burgers</h4>
+        <button class="menu-btn">Classic Burger</button>
+        <button class="menu-btn">Cheese Burger</button>
+    </div>
 
-            @foreach (var item in category.MenuItems)
-            {
-                <form asp-action="AddItem" method="post" style="display:inline;">
-                    <input type="hidden" name="orderId" value="@Model.Id" />
-                    <input type="hidden" name="menuItemId" value="@item.Id" />
-                    <button type="submit" class="menu-btn">
-                        @item.Name - R @item.Price
-                    </button>
-                </form>
-            }
-        </div>
-    }
+    <div class="menu-category">
+        <h4>Drinks</h4>
+        <button class="menu-btn">Coke</button>
+        <button class="menu-btn">Water</button>
+    </div>
 
 </div>
 
 <div class="order-summary">
     <h3>Current Order</h3>
-
-    @if (Model.OrderItems.Any())
-    {
-        <table>
-            <tr>
-                <th>Item</th>
-                <th>Qty</th>
-                <th>Total</th>
-            </tr>
-
-            @foreach (var item in Model.OrderItems)
-            {
-                <tr>
-                    <td>@item.MenuItem.Name</td>
-                    <td>@item.Quantity</td>
-                    <td>R @(item.Quantity* item.Price)</td>
-                </tr>
-            }
-        </table>
-
-        <h4>
-            Total: R @Model.OrderItems.Sum(i => i.Quantity * i.Price)
-        </h4>
-
-        <form asp-action="SendToKitchen" method="post">
-            <input type="hidden" name="orderId" value="@Model.Id" />
-            <button class="btn-primary">Send to Kitchen</button>
-        </form>
-    }
-    else
-    {
-        <p>No items added yet.</p>
-    }
+    <p>No items added yet.</p>
 </div>
